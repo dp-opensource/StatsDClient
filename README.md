@@ -18,7 +18,7 @@ Add the following lines to your `deps`-file.
 
 ```
 [StatsDClient]
-    git=git://github.com/lino-dp/StatsDClient.git
+    git=git://github.com/DigitalPioneers/StatsDClient.git
     target=/statsd
 ```
 
@@ -30,19 +30,12 @@ php bin/vendors install
 
 ### Symfony 2.1
 
-As this Client hasn't yet found its way into packagist you will have to register it as repository first.
-Register the git-repository by adding the following lines to your `composer.json`.
+This client is available as a package in packagist. You simply have to add `digital-pioneers/statsd-client` to the `require`-section of your `composer.json`.
 
 ``` json
 {
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/lino-dp/StatsDClient.git"
-        }
-    ],
     "require": {
-        "php": "DigitalPioneers/StatsD-Client",
+        "php": "digital-pioneers/statsd-client",
     }
 }
 ```
@@ -82,7 +75,7 @@ Composer should've registered the namespace properly.
 
 ## Register StatsD as a service
 
-Now add the following lines to your `config.yml` and you are good to go.
+Now add the following lines to your `config.yml` and you're good to go.
 
 ```
 services:
@@ -102,4 +95,4 @@ $statsd = $this->get('statsd');
 $statsd->increment('mypage.visits');
 ```
 
-For further informations on the functions offered take a look at the [StatsD.php](https://github.com/lino-dp/StatsDClient/blob/master/src/StatsD/StatsD.php).
+For further informations on the functions offered take a look at the [StatsD.php](https://github.com/DigitalPioneers/StatsDClient/blob/master/src/StatsD/StatsD.php).
