@@ -1,7 +1,8 @@
 {
-    "name": "DigitalPioneers/StatsD-Client",
+    "name": "digital-pioneers/statsd-client",
     "type": "symfony-bundle",
     "description": "Small PHP client which pushes data over UDP to a stats.d server",
+    "license": "GPL-3.0+",
     "keywords": ["statsd", "statistics"],
     "homepage": "http://www.digitalpioneers.de",
     "require": {
